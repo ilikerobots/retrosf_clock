@@ -69,12 +69,12 @@ class _BinarySidebarState extends State<BinarySidebar>
       ..addListener(() {
         final int maxToScramble = 5;
         int actualToScramble = rndValue.value;
-        final int endScramblePoint = actualToScramble;
         int startScramblePoint = 0;
         if (actualToScramble > maxToScramble) {
           startScramblePoint = actualToScramble - maxToScramble;
           actualToScramble = maxToScramble;
         }
+        final int endScramblePoint = startScramblePoint + actualToScramble;
         String rndPart = "";
         for (int i = startScramblePoint; i < endScramblePoint; i++) {
           rndPart =
@@ -83,8 +83,7 @@ class _BinarySidebarState extends State<BinarySidebar>
         String newPart = binaryString.substring(0, startScramblePoint);
         String oldPart = binaryString.substring(endScramblePoint);
         setState(() {
-          binaryString =
-              (newPart + rndPart + oldPart).substring(0, (widget.rows - 2) * 2);
+          binaryString = newPart + rndPart + oldPart;
         });
       });
     doIntermittentControllerRestart(
@@ -118,10 +117,12 @@ class _BinarySidebarState extends State<BinarySidebar>
     StrutStyle strut = StrutStyle(leading: .76, forceStrutHeight: true);
     textWidgets.add(new Text("≜"));
     for (int i = 0; i < widget.rows - 2; i++) {
-      textWidgets.add(new Text(
-        binaryString.substring(i * 2, i * 2 + 2),
-        strutStyle: strut,
-      ));
+      if (binaryString.length >= i * 2 + 2) {
+        textWidgets.add(new Text(
+          binaryString.substring(i * 2, i * 2 + 2),
+          strutStyle: strut,
+        ));
+      }
     }
 //    textWidgets.add(new Text("≟"));
     return ChromaticBlurredWidget(
