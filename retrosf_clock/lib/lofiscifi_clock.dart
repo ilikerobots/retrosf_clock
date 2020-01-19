@@ -33,17 +33,10 @@ import 'anim/jittered.dart';
 import 'anim/skew_glitch.dart';
 
 const EffectMultiplier = 2.5; //0 to disable, 1 for normal, any other multiplier
-//const EffectProbabilityClockBigFlash = 0.02 * EffectMultiplier;
-//const EffectProbabilityFullSkew = 0.02 * EffectMultiplier;
-//const EffectProbabilityJitter = 0.02 * EffectMultiplier;
-//const EffectProbabilityRollingVSync = 0.02 * EffectMultiplier;
-//const EffectProbabilityChromaticGlitch = 0.02 * EffectMultiplier;
-//const EffectProbabilitySidebarScramble = 0.15 * EffectMultiplier;
-
-const EffectProbabilityClockBigFlash = 0.08 * EffectMultiplier;
-const EffectProbabilityFullSkew = 0.04 * EffectMultiplier;
-const EffectProbabilityJitter = 0.04 * EffectMultiplier;
-const EffectProbabilityRollingVSync = 0.05 * EffectMultiplier;
+const EffectProbabilityClockBigFlash = 0.02 * EffectMultiplier;
+const EffectProbabilityFullSkew = 0.02 * EffectMultiplier;
+const EffectProbabilityJitter = 0.02 * EffectMultiplier;
+const EffectProbabilityRollingVSync = 0.02 * EffectMultiplier;
 const EffectProbabilityChromaticGlitch = 0.02 * EffectMultiplier;
 const EffectProbabilitySidebarScramble = 0.15 * EffectMultiplier;
 

@@ -87,8 +87,7 @@ class _ChromaticFlashGlitchState extends State<ChromaticFlashGlitch>
 
   Widget build(BuildContext context) => AnimatedBuilder(
       animation: animationController,
-      builder: (context, child) =>
-          Transform(
+      builder: (context, child) => Transform(
             transform: Matrix4.identity()..translate(translate.value),
             child: ClipRect(
               child: Stack(children: [

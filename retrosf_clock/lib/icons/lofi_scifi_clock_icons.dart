@@ -25,10 +25,13 @@ class LofiScifiClockIcons {
   static const _kFontFam = 'LofiScifiClockIcons';
 
   static const IconData sun = const IconData(0xe800, fontFamily: _kFontFam);
-  static const IconData cloud_sun = const IconData(0xe801, fontFamily: _kFontFam);
+  static const IconData cloud_sun =
+      const IconData(0xe801, fontFamily: _kFontFam);
   static const IconData wind = const IconData(0xe802, fontFamily: _kFontFam);
   static const IconData mist = const IconData(0xe803, fontFamily: _kFontFam);
   static const IconData rain = const IconData(0xe804, fontFamily: _kFontFam);
-  static const IconData snowflake = const IconData(0xe806, fontFamily: _kFontFam);
-  static const IconData clouds_flash_alt = const IconData(0xe807, fontFamily: _kFontFam);
+  static const IconData snowflake =
+      const IconData(0xe806, fontFamily: _kFontFam);
+  static const IconData clouds_flash_alt =
+      const IconData(0xe807, fontFamily: _kFontFam);
 }

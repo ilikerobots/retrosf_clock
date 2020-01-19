@@ -77,7 +77,8 @@ class _BinarySidebarState extends State<BinarySidebar>
         }
         String rndPart = "";
         for (int i = startScramblePoint; i < endScramblePoint; i++) {
-          rndPart = rndPart + (_rnd.nextInt(16).toRadixString(16).toUpperCase());
+          rndPart =
+              rndPart + (_rnd.nextInt(16).toRadixString(16).toUpperCase());
         }
         String newPart = binaryString.substring(0, startScramblePoint);
         String oldPart = binaryString.substring(endScramblePoint);
@@ -105,7 +106,7 @@ class _BinarySidebarState extends State<BinarySidebar>
       setState(() {
         binaryString = binaryString +
             _rnd.nextInt(16).toRadixString(16).toUpperCase() +
-            _rnd.nextInt(16).toRadixString(16).toUpperCase() ;
+            _rnd.nextInt(16).toRadixString(16).toUpperCase();
       });
     }
   }

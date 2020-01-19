@@ -28,7 +28,7 @@ class _ScanLinePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final Paint linePaint = Paint()..color = color;
-    for (double y = 0.0; y <= size.height; y += interval ) {
+    for (double y = 0.0; y <= size.height; y += interval) {
       linePaint.strokeWidth = this.lineWidth;
       canvas.drawLine(Offset(0.0, y), Offset(size.width, y), linePaint);
     }
